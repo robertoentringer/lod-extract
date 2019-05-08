@@ -110,7 +110,7 @@ const feedBack = () => {
   console.info("√ Json files : %s", infos.countJson)
   console.info("√ Mp3 files : %s", infos.countAudio)
   console.info("☓ Items without audio : ", infos.noAudio.length, infos.noAudio)
-  console.info("⁈ Files very small : ", infos.smallFiles.length, infos.smallFiles)
+  console.info("⁈ Files very small : ", infos.smallFiles.length, infos.smallFiles, "\n")
   process.exit()
 }
 
