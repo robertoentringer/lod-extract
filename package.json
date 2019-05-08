@@ -1,0 +1,59 @@
+{
+  "name": "lod-extract",
+  "version": "0.0.6",
+  "description": "Extract data of the Lëtzebuerger Online Dictionnaire (LOD).",
+  "main": "main.js",
+  "bin": {
+    "lod-extract": "main.js"
+  },
+  "scripts": {
+    "extract": "node main.js",
+    "lint": "eslint --fix main.js",
+    "prepack": "npm run lint",
+    "version": "npm run lint && git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "files": [
+    "main.js"
+  ],
+  "keywords": [
+    "tar",
+    "lod",
+    "mp3",
+    "parse",
+    "audio",
+    "base64",
+    "lod-lu",
+    "extract",
+    "xml-flow",
+    "luxembourg",
+    "worterbuch",
+    "dictionary",
+    "dicionario",
+    "dictionnaire",
+    "letzebuerger",
+    "luxemburgish",
+    "luxembourgish",
+    "letzebuerger-online-dictionnaire"
+  ],
+  "author": "Roberto Entringer",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertoentringer/lod-extract.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoentringer/lod-extract/issues"
+  },
+  "homepage": "https://github.com/robertoentringer/lod-extract#readme",
+  "dependencies": {
+    "tar": "^4.4.8",
+    "xml-flow": "^1.0.2"
+  }
+}
