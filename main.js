@@ -107,9 +107,10 @@ const feedBack = () => {
   process.stdout.cursorTo(0)
   process.stdout.clearLine()
   console.info("⦿ Execution time : %s", time)
-  console.info("√ Total items with audio : ", infos.countAudio)
+  console.info("√ Json files : %s", infos.countJson)
+  console.info("√ Mp3 files : %s", infos.countAudio)
   console.info("☓ Items without audio : ", infos.noAudio.length, infos.noAudio)
-  console.info("⁈ Filesvery small : ", infos.smallFiles.length, infos.smallFiles)
+  console.info("⁈ Files very small : ", infos.smallFiles.length, infos.smallFiles)
   process.exit()
 }
 
