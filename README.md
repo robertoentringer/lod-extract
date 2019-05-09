@@ -5,17 +5,18 @@ A Node script for extract data of the Lëtzebuerger Online Dictionnaire (LOD)
 Author : [Roberto Entringer](https://robertoentringer.com)  
 License: MIT
 
-## Installation
+## Installation / Usage
 
 ```shell
 $ npm install lod-extract
 ```
-
-# Usage
+or
 
 ```shel
 $ npx lod-extract
 ```
+
+[![screenshot2.png](screenshot2.png?raw=true)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/)
 
 # Dependencies
 
