@@ -16,7 +16,7 @@ or
 $ npx lod-extract
 ```
 
-[![screenshot2.png](screenshot2.png?raw=true)](https://github.com/robertoentringer/lod-extract)
+[![screenshot2.png](screenshot2.png?raw=true)](screenshot2.png?raw=true)
 
 # Dependencies
 
