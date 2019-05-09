@@ -16,7 +16,7 @@ or
 $ npx lod-extract
 ```
 
-[![screenshot2.png](screenshot2.png?raw=true)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/)
+[![screenshot2.png](screenshot2.png?raw=true)](https://github.com/robertoentringer/lod-extract)
 
 # Dependencies
 
