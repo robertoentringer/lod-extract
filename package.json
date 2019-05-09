@@ -1,6 +1,6 @@
 {
   "name": "lod-extract",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Extract data of the Lëtzebuerger Online Dictionnaire (LOD).",
   "main": "main.js",
   "bin": {
