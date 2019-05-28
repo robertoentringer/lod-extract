@@ -3,7 +3,8 @@
 A Node script for extract data of the Lëtzebuerger Online Dictionnaire (LOD)
 
 Author : [Roberto Entringer](https://robertoentringer.com)  
-License: MIT
+License: MIT  
+Npm package : https://www.npmjs.com/package/lod-extract   
 
 ## Installation / Usage
 
