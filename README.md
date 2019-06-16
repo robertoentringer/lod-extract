@@ -13,7 +13,7 @@ $ npm install lod-extract
 ```
 or
 
-```shel
+```shell
 $ npx lod-extract
 ```
 
