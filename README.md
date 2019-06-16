@@ -17,7 +17,7 @@ or
 $ npx lod-extract
 ```
 
-[![screenshot2.png](screenshot2.png?raw=true)](screenshot2.png?raw=true)
+[![screenshot2.png](screenshot2.png)](screenshot2.png?raw=true)
 
 # Dependencies
 
@@ -30,4 +30,4 @@ Website: http://www.lod.lu
 Source: https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/  
 Licence: Creative Commons Zero (CC0)
 
-[![screenshot.png](screenshot.png?raw=true)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/)
+[![screenshot.png](screenshot.png)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/)
