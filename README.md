@@ -1,6 +1,6 @@
 # Lod Extract
 
-A Node script for extract data of the Lëtzebuerger Online Dictionnaire (LOD)
+A Node script for extract data of the Lëtzebuerger Online Dictionnaire (LOD).
 
 Author : [Roberto Entringer](https://robertoentringer.com)  
 License: MIT  
