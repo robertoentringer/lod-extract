@@ -1,6 +1,6 @@
 {
   "name": "lod-extract",
-  "version": "0.0.0",
+  "version": "0.0.11",
   "description": "Extract data of the Lëtzebuerger Online Dictionnaire (LOD).",
   "main": "main.js",
   "bin": {
@@ -11,8 +11,7 @@
     "lint": "eslint --fix main.js",
     "prepack": "npm run lint",
     "version": "npm run lint && git add -A",
-    "postversion": "git push && git push --tags",
-    "semantic-release": "semantic-release"
+    "postversion": "git push && git push --tags"
   },
   "files": [
     "main.js"
@@ -44,8 +43,7 @@
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2",
-    "semantic-release": "^15.13.18"
+    "prettier": "^1.18.2"
   },
   "repository": {
     "type": "git",
