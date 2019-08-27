@@ -11,7 +11,8 @@
     "lint": "eslint --fix main.js",
     "prepack": "npm run lint",
     "version": "npm run lint && git add -A",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "semantic-release": "semantic-release"
   },
   "files": [
     "main.js"
@@ -43,7 +44,8 @@
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "semantic-release": "^15.13.24"
   },
   "repository": {
     "type": "git",
