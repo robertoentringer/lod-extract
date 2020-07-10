@@ -17,11 +17,11 @@ let audioFolder, jsonFolder
 const getURLfromAPI = () => {
   return new Promise((resolve, reject) => {
     https
-      .get(api, resp => {
+      .get(api, (resp) => {
         if (resp.statusCode !== 200)
           return reject(new Error(resp.statusCode + " : " + resp.statusMessage))
         let body = ""
-        resp.on("data", data => (body += data))
+        resp.on("data", (data) => (body += data))
         resp.on("end", () => {
           try {
             body = JSON.parse(body)
@@ -33,7 +33,7 @@ const getURLfromAPI = () => {
           else reject(new Error("URL ressource not found"))
         })
       })
-      .on("error", err => reject(err))
+      .on("error", (err) => reject(err))
   })
 }
 
@@ -46,18 +46,18 @@ const createFolders = (distFolder = "dist") => {
     if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true })
 }
 
-const extract = url =>
-  https.get(url, resp => {
+const extract = (url) =>
+  https.get(url, (resp) => {
     console.info(`Extracting from : ${url}`, "\n")
-    resp.pipe(tar.t()).on("entry", entry => {
+    resp.pipe(tar.t()).on("entry", (entry) => {
       if (regex.test(entry.path)) parse(entry)
     })
   })
 
-const parse = entry => {
+const parse = (entry) => {
   console.info(`Parsing from : ${entry.path}`, "\n")
   return flow(entry)
-    .on("tag:lod:item", item => {
+    .on("tag:lod:item", (item) => {
       const id = item["lod:meta"]["lod:id"]
       printProgress(id)
       if ("lod:audio" in item && "$text" in item["lod:audio"]) {
@@ -67,7 +67,7 @@ const parse = entry => {
       delete item["lod:audio"]
       writeJson(id, item)
     })
-    .on("error", err => console.error(err))
+    .on("error", (err) => console.error(err))
     .on("end", feedBack)
 }
 
@@ -95,7 +95,7 @@ const writeAudio = (id, data) => {
   }
 }
 
-const printProgress = progress => {
+const printProgress = (progress) => {
   process.stdout.clearLine()
   process.stdout.cursorTo(0)
   process.stdout.write(progress)
@@ -117,7 +117,7 @@ const feedBack = () => {
 const main = () => {
   process.on("SIGINT", feedBack)
   getURLfromAPI()
-    .then(url => {
+    .then((url) => {
       createFolders(path.basename(url).replace(".tar.gz", ""))
       extract(url)
     })

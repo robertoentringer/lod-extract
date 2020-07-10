@@ -1,6 +1,6 @@
 {
   "name": "lod-extract",
-  "version": "0.0.",
+  "version": "0.0.0-development",
   "description": "Extract data of the Lëtzebuerger Online Dictionnaire (LOD).",
   "main": "main.js",
   "bin": {
@@ -9,9 +9,6 @@
   "scripts": {
     "extract": "node main.js",
     "lint": "eslint --fix main.js",
-    "prepack": "npm run lint",
-    "version": "npm run lint && git add -A",
-    "postversion": "git push && git push --tags",
     "semantic-release": "semantic-release"
   },
   "files": [
@@ -41,11 +38,11 @@
   "author": "Roberto Entringer",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2",
-    "semantic-release": "^15.13.24"
+    "eslint": "^7.4.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.0.5",
+    "semantic-release": "^17.1.1"
   },
   "repository": {
     "type": "git",
@@ -56,7 +53,7 @@
   },
   "homepage": "https://github.com/robertoentringer/lod-extract#readme",
   "dependencies": {
-    "tar": "^4.4.10",
-    "xml-flow": "^1.0.3"
+    "tar": "^6.0.2",
+    "xml-flow": "^1.0.4"
   }
 }
