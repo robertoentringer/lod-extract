@@ -6,7 +6,9 @@ const path = require("path")
 const tar = require("tar")
 const fs = require("fs")
 
-const api = "https://data.public.lu/api/1/datasets/letzebuerger-online-dictionnaire-raw-data/"
+const api = process.argv.slice(2).shift() ||
+  "https://data.public.lu/api/1/datasets/letzebuerger-online-dictionnaire/"
+
 
 const regex = /\.xml$/
 const infos = { noAudio: [], smallFiles: [], writeFail: [], countAudio: 0, countJson: 0 }
