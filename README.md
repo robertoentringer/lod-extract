@@ -2,9 +2,9 @@
 
 A Node script for extract data of the Lëtzebuerger Online Dictionnaire (LOD).
 
-Author : [Roberto Entringer](https://robertoentringer.com)  
-License: MIT  
-Npm package : https://www.npmjs.com/package/lod-extract   
+Author : [Roberto Entringer](https://robertoentringer.com)
+License: MIT
+Npm package : https://www.npmjs.com/package/lod-extract
 
 ## Installation / Usage
 
@@ -25,9 +25,9 @@ Node dependencies: [xml-flow](https://www.npmjs.com/package/xml-flow), [tar](htt
 
 # Data source
 
-Data from the "Lëtzebuerger Online Dictionnaire" (LOD)  
-Website: http://www.lod.lu  
-Source: https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/  
+Data from the "Lëtzebuerger Online Dictionnaire" (LOD)
+Website: http://www.lod.lu
+Source: https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire/
 Licence: Creative Commons Zero (CC0)
 
-[![screenshot.png](screenshot.png)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire-raw-data/)
+[![screenshot.png](screenshot.png)](https://data.public.lu/fr/datasets/letzebuerger-online-dictionnaire/)
