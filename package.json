@@ -7,7 +7,7 @@
     "lod-extract": "main.js"
   },
   "scripts": {
-    "extract": "node main.js",
+    "start": "node main.js",
     "lint": "eslint --fix main.js"
   },
   "files": [
