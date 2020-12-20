@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node main.js",
-    "lint": "eslint --fix main.js"
+    "lint": "eslint --fix main.js",
+    "prepublishOnly": "npm run lint && npm version patch && git push && git push --tags"
   },
   "files": [
     "main.js"
