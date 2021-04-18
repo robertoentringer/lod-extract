@@ -11,10 +11,10 @@ const api =
   'https://data.public.lu/api/1/datasets/letzebuerger-online-dictionnaire/'
 
 const regex = /\.xml$/
-const infos = { noAudio: [], smallFiles: [], writeFail: [], countAudio: 0, countJson: 0 }
+const infos = { writeFail: [], countJson: 0 }
 const hrstart = process.hrtime()
 
-let audioFolder, jsonFolder
+let jsonFolder
 
 const getURLfromAPI = () => {
   return new Promise((resolve, reject) => {
@@ -41,9 +41,8 @@ const getURLfromAPI = () => {
 
 const createFolders = (distFolder = 'dist') => {
   distFolder = path.join(process.cwd(), distFolder)
-  audioFolder = path.join(distFolder, 'audio')
   jsonFolder = path.join(distFolder, 'json')
-  const folders = [distFolder, audioFolder, jsonFolder]
+  const folders = [distFolder, jsonFolder]
   for (const folder of folders)
     if (!fs.existsSync(folder)) fs.mkdirSync(folder, { recursive: true })
 }
@@ -62,11 +61,6 @@ const parse = (entry) => {
     .on('tag:lod:item', (item) => {
       const id = item['lod:meta']['lod:id']
       printProgress(id)
-      if ('lod:audio' in item && '$text' in item['lod:audio']) {
-        const audio = item['lod:audio']['$text']
-        writeAudio(id, audio)
-      } else infos.noAudio.push(id)
-      delete item['lod:audio']
       writeJson(id, item)
     })
     .on('error', (err) => console.error(err))
@@ -84,19 +78,6 @@ const writeJson = (id, item) => {
   }
 }
 
-const writeAudio = (id, data) => {
-  const filename = `${id}.mp3`
-  const audioPath = path.join(audioFolder, filename)
-  const buff = new Buffer.from(data, 'base64')
-  if (buff.length < 1000) infos.smallFiles.push(id)
-  try {
-    fs.writeFileSync(audioPath, buff)
-    infos.countAudio++
-  } catch (err) {
-    infos.writeFail.push(filename)
-  }
-}
-
 const printProgress = (progress) => {
   process.stdout.clearLine()
   process.stdout.cursorTo(0)
@@ -109,10 +90,7 @@ const feedBack = () => {
   process.stdout.cursorTo(0)
   process.stdout.clearLine()
   console.info('⦿ Execution time : %s', time)
-  console.info('√ Json files : %s', infos.countJson)
-  console.info('√ Mp3 files : %s', infos.countAudio)
-  console.info('☓ Items without audio : ', infos.noAudio.length, infos.noAudio)
-  console.info('⁈ Files very small : ', infos.smallFiles.length, infos.smallFiles, '\n')
+  console.info('√ Json files : %s', infos.countJson, '\n')
   process.exit()
 }
 
