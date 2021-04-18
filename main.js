@@ -49,14 +49,14 @@ const createFolders = (distFolder = 'dist') => {
 
 const extract = (url) =>
   https.get(url, (resp) => {
-    console.info(`Extracting from : ${url}`, '\n')
+    console.info(`\nExtracting from : ${url}\n`)
     resp.pipe(tar.t()).on('entry', (entry) => {
       if (regex.test(entry.path)) parse(entry)
     })
   })
 
 const parse = (entry) => {
-  console.info(`Parsing from : ${entry.path}`, '\n')
+  console.info(`Parsing from : ${entry.path}\n`)
   return flow(entry)
     .on('tag:lod:item', (item) => {
       const id = item['lod:meta']['lod:id']
