@@ -14,7 +14,7 @@ $ npm install lod-extract
 or
 
 ```shell
-$ npx lod-extract
+$ npx --yes lod-extract
 ```
 
 [![screenshot2.png](screenshot2.png)](screenshot2.png?raw=true)
